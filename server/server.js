@@ -10,6 +10,8 @@ import cookieParser from 'cookie-parser'
 import config from './config'
 import Html from '../client/html'
 
+const { writeFile, readFile } = require('fs').promises
+
 const Root = () => ''
 
 try {
@@ -31,6 +33,21 @@ let connections = []
 const port = process.env.PORT || 8090
 const server = express()
 
+const savePerson = (person) => {
+  return writeFile(`${__dirname}/persons.json`, JSON.stringify(person), {
+    encoding: 'utf8'
+  })
+}
+
+const getPersons = async () => {
+  try {
+    const info = await readFile(`${__dirname}/persons.json`, { encoding: 'utf8' })
+    return JSON.parse(info)
+  } catch (e) {
+    return []
+  }
+}
+
 const middleware = [
   cors(),
   express.static(path.resolve(__dirname, '../dist/assets')),
@@ -41,6 +58,12 @@ const middleware = [
 
 middleware.forEach((it) => server.use(it))
 
+server.post('/api/v1/persons', async (req, res) => {
+  const oldPersons = await getPersons()
+  const newPerson = req.body
+  await savePerson([...oldPersons, newPerson])
+  res.json(req.body)
+})
 server.use('/api/', (req, res) => {
   res.status(404)
   res.end()
