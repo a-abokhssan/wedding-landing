@@ -1,5 +1,8 @@
+import axios from 'axios'
+
 const SET_STATE = 'SET_STATE'
 const ADDED_GUEST = 'ADDED_GUEST'
+const GET_GUESTS = 'GET_GUESTS'
 
 const initialState = {
   person: {
@@ -9,7 +12,8 @@ const initialState = {
     food: '',
     drink: '',
     transport: ''
-  }
+  },
+  guests: []
 }
 
 export default (state = initialState, action) => {
@@ -19,7 +23,12 @@ export default (state = initialState, action) => {
     case ADDED_GUEST:
       return {
         ...state,
-        person: { name: '', answer: '', wishes: '', food: '', drink: '', transport: '' }
+        person: action.person
+      }
+    case GET_GUESTS:
+      return {
+        ...state,
+        guests: action.guests
       }
     default:
       return state
@@ -38,7 +47,14 @@ export function addGuest(person) {
     },
     body: JSON.stringify(person)
   })
-  return (dispatch) => {
-    dispatch({ type: ADDED_GUEST })
+  return { type: ADDED_GUEST, person }
+}
+
+export function getGuests() {
+  return async (dispatch) => {
+    await axios('/api/v1/persons')
+      .then(({ data }) => {
+        dispatch({ type: GET_GUESTS, guests: data })
+      })
   }
 }

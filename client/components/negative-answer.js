@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setState, addGuest } from '../redux/reducers/guests'
 
@@ -6,6 +6,12 @@ const Negative = () => {
   const dispatch = useDispatch()
   const person = useSelector((s) => s.guests.person)
   const [value, setValue] = useState('')
+  useEffect(() => {
+    if (person.wishes !== '') {
+      dispatch(addGuest(person))
+    }
+  }, [person])
+
   return (
     <div>
       <p>So sorry</p>
@@ -14,7 +20,6 @@ const Negative = () => {
         type="button"
         onClick={() => {
           dispatch(setState('wishes', value))
-          dispatch(addGuest(person))
         }}
       >
         Ok

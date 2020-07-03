@@ -64,6 +64,12 @@ server.post('/api/v1/persons', async (req, res) => {
   await savePerson([...oldPersons, newPerson])
   res.json(req.body)
 })
+
+server.get('/api/v1/persons', async (req, res) => {
+  const person = await getPersons()
+  res.json(person)
+})
+
 server.use('/api/', (req, res) => {
   res.status(404)
   res.end()

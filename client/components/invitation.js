@@ -14,14 +14,13 @@ const Invitation = () => {
       <div
         className={`${
           person.name === ''
-            ? 'flex px-6 py-2 rounded-full bg-orange-300 border border-orange-600 items-center'
+          ? 'flex justify-center items-center bg-blue-500 hover:bg-blue-700 font-bold py-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >
         <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
         <button
           type="button"
-          /* !{value} ? '' : 'disabled' */
           onClick={() => {
             dispatch(setState('name', value))
           }}
@@ -31,8 +30,8 @@ const Invitation = () => {
       </div>
       <div
         className={`${
-          person.answer === ''
-            ? 'flex px-6 py-2 rounded-full bg-orange-300 border border-orange-600 items-center'
+          person.answer === '' && person.name !== ''
+          ? 'flex justify-between bg-blue-500 hover:bg-blue-700 font-bold py-2 px-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >
@@ -56,7 +55,7 @@ const Invitation = () => {
       <div
         className={`${
           person.answer === 'Yes'
-            ? 'flex px-6 py-2 rounded-full bg-orange-300 border border-orange-600 items-center'
+            ? 'flex justify-between bg-blue-500 hover:bg-blue-700 font-bold py-2 px-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >
@@ -65,7 +64,7 @@ const Invitation = () => {
       <div
         className={`${
           person.answer === 'No'
-            ? 'flex px-6 py-2 rounded-full bg-orange-300 border border-orange-600 items-center'
+            ? 'flex justify-between bg-blue-500 hover:bg-blue-700 font-bold py-2 px-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >

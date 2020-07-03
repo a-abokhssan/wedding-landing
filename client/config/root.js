@@ -9,10 +9,8 @@ import store, { history } from '../redux'
 
 import Home from '../components/home'
 import NotFound from '../components/404'
-
 import Startup from './startup'
-import Pozitive from '../components/pozitive-answer'
-import Negative from '../components/negative-answer'
+import Guests from '../components/guests'
 
 const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
   const func = (props) =>
@@ -58,8 +56,7 @@ const RootComponent = (props) => {
         <Startup>
           <Switch>
             <Route exact path="/" component={() => <Home />} />
-            <Route exact path="/pozitive" component={() => <Pozitive />} />
-            <Route exact path="/negative" component={() => <Negative />} />
+            <Route exact path="/guests" component={() => <Guests />} />
             <Route component={() => <NotFound />} />
           </Switch>
         </Startup>

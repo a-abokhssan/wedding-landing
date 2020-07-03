@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setState } from '../redux/reducers/guests'
+import { setState, addGuest } from '../redux/reducers/guests'
 
 const Pozitive = () => {
   const dispatch = useDispatch()
@@ -10,7 +10,7 @@ const Pozitive = () => {
     <div>
       <p>{person.name}, thank you for coming. Please answer for questions.</p>
       <div>
-        <p>Food</p>
+        <p>Сhoose your drink</p>
         <label htmlFor="meat">Meat</label>
         <input
           type="checkbox"
@@ -39,7 +39,14 @@ const Pozitive = () => {
           }}
         />
       </div>
-      {person.food}
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(addGuest(person))
+        }}
+      >
+        ok
+        </button>
     </div>
   )
 }
