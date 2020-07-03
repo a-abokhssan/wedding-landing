@@ -46,7 +46,7 @@ const Pozitive = () => {
         }}
       >
         ok
-        </button>
+      </button>
     </div>
   )
 }

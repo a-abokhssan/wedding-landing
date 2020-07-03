@@ -12,10 +12,12 @@ const Guests = () => {
   return (
     <div>
       {guests.map((it) => {
-        return (<div key={it}>
-          {it.name}
-          {it.food}
-        </div>)
+        return (
+          <div key={it}>
+            {it.name}
+            {it.food}
+          </div>
+        )
       })}
     </div>
   )

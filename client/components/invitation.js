@@ -10,11 +10,11 @@ const Invitation = () => {
   const [value, setValue] = useState('')
 
   return (
-    <div>
+    <div id="invitation">
       <div
         className={`${
           person.name === ''
-          ? 'flex justify-center items-center bg-blue-500 hover:bg-blue-700 font-bold py-2 rounded max-w-xs'
+            ? 'flex justify-center items-center bg-blue-500 hover:bg-blue-700 font-bold py-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >
@@ -31,7 +31,7 @@ const Invitation = () => {
       <div
         className={`${
           person.answer === '' && person.name !== ''
-          ? 'flex justify-between bg-blue-500 hover:bg-blue-700 font-bold py-2 px-2 rounded max-w-xs'
+            ? 'flex justify-between bg-blue-500 hover:bg-blue-700 font-bold py-2 px-2 rounded max-w-xs'
             : 'hidden'
         }`}
       >
