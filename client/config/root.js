@@ -11,6 +11,7 @@ import Home from '../components/home'
 import NotFound from '../components/404'
 import Startup from './startup'
 import Guests from '../components/guests'
+import Wishes from '../components/wishes'
 
 const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
   const func = (props) =>
@@ -57,6 +58,7 @@ const RootComponent = (props) => {
           <Switch>
             <Route exact path="/" component={() => <Home />} />
             <Route exact path="/guests" component={() => <Guests />} />
+            <Route exact path="/wishes" component={() => <Wishes />} />
             <Route component={() => <NotFound />} />
           </Switch>
         </Startup>

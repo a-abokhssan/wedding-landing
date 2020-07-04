@@ -7,8 +7,7 @@ const Map = () => {
         <div className="p-4 text-gray-800 text-lg">
           <h1 className="font-bold text-gray-800 text-lg"> АДРЕС ЗАГСА </h1>
           <p className="font-regular text-gray-800 text-lg">
-            {' '}
-            Дворец бракосочетания №3, г.Пушкин, Садовая ул.22{' '}
+            Дворец бракосочетания №3, г.Пушкин, Садовая ул.22
           </p>
         </div>
         <div className="px-4 pt-2 pb-2 text-gray-800 text-lg">
