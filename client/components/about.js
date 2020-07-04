@@ -34,12 +34,12 @@ const About = () => {
         return (
           <div
             key={it.id}
-            className="min-w-320 max-w-sm h-70 rounded overflow-hidden shadow-lg mx-2 my-2"
+            className="flex flex-wrap w-2/5 h-70 rounded overflow-hidden shadow-lg mx-2 my-2"
           >
             <img className="h-40 w-full object-cover object-center p-2" alt="cart" src={it.img} />
-            <div className="px-2 py-2">
+            <div className="px-6 py-4">
               <div className="font-bold text-s mb-2">{it.title}</div>
-              <div className="font-normal text-s mb-2">{it.description}</div>
+              <div className="font-regular text-s mb-2">{it.description}</div>
             </div>
           </div>
         )

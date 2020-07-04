@@ -11,7 +11,8 @@ const initialState = {
     wishes: '',
     food: '',
     drink: '',
-    transport: ''
+    transport: '',
+    phone: ''
   },
   guests: []
 }
