@@ -13,7 +13,7 @@ const Invitation = () => {
     <div className="flex justify-center py-10">
       <div className={`${person.name === '' ? 'm-2 flex flex-col h-12' : 'hidden'}`}>
         <p className="px-2 pt-2 pb-2 font-bold text-gray-800 text-lg">
-          Нам ждать вас?: Дайте нам знать, пройдя опрос ниже
+          Нам ждать вас? Дайте нам знать, пройдя опрос ниже
         </p>
         <input
           type="text"
@@ -40,7 +40,7 @@ const Invitation = () => {
         }`}
       >
         <h3 className="flex items-center justify-between">
-          Привет, {value}. Ты придешь к нам на свадьбу?{' '}
+          Привет, {value}. Ты придешь к нам на свадьбу?
         </h3>
         <div className="flex flex-row py-6">
           <button

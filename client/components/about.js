@@ -36,7 +36,11 @@ const About = () => {
             key={it.id}
             className="flex flex-wrap w-2/5 h-70 rounded overflow-hidden shadow-lg mx-2 my-2"
           >
-            <img className="h-40 w-full object-cover object-center p-2" alt="cart" src={it.img} />
+            <img
+              className="h-40 w-full object-cover object-center p-2"
+              alt={it.title}
+              src={it.img}
+            />
             <div className="px-6 py-4">
               <div className="font-bold text-s mb-2">{it.title}</div>
               <div className="font-regular text-s mb-2">{it.description}</div>
