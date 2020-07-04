@@ -12,7 +12,6 @@ const Pozitive = () => {
     ['Whiskey', 'Vodka', 'Beer', 'I am not drink']
   ]
   return (
-<<<<<<< HEAD
     <div className="flex items-center justify-center shadow-lg mt-8 mx-8 mb-4 max-w-lg">
       <form className="w-full max-w-xl bg-white rounded-lg px-4 pt-2">
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -92,48 +91,6 @@ const Pozitive = () => {
           </div>
         </div>
       </form>
-=======
-    <div>
-      <p>{person.name}, thank you for coming. Please answer for questions.</p>
-      <div>
-        <p>Сhoose your drink</p>
-        <label htmlFor="meat">Meat</label>
-        <input
-          type="checkbox"
-          id="meat"
-          name="meat"
-          onClick={() => {
-            dispatch(setState('food', 'Meat'))
-          }}
-        />
-        <label htmlFor="fish">Fish</label>
-        <input
-          type="checkbox"
-          id="fish"
-          name="fish"
-          onClick={() => {
-            dispatch(setState('food', 'Fish'))
-          }}
-        />
-        <label htmlFor="chicken">Chicken</label>
-        <input
-          type="checkbox"
-          id="chicken"
-          name="chicken"
-          onClick={() => {
-            dispatch(setState('food', 'Chicken'))
-          }}
-        />
-      </div>
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(addGuest(person))
-        }}
-      >
-        ok
-      </button>
->>>>>>> 717b6d1166e4097a59c9555d3427d47bd88f0aa1
     </div>
   )
 }
