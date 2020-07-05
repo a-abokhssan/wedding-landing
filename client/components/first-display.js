@@ -10,25 +10,25 @@ const First = () => {
       <nav className="bg-white px-8 pt-1">
         <div className="flex justify-center">
           <a
-            className="no-underline text-grey-dark uppercase tracking-wide font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8"
+            className="no-underline text-grey-dark uppercase font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8 hover:text-red-400 active:text-red-600"
             href="#invitation"
           >
             Главное
           </a>
           <a
-            className="no-underline text-grey-dark uppercase tracking-wide font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8 hover:text-red-400"
+            className="no-underline text-grey-dark uppercase font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8 hover:text-red-400 active:text-red-600"
             href="#"
           >
             Наши пожелания
           </a>
           <a
-            className="no-underline text-grey-dark uppercase tracking-wide font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8"
+            className="no-underline text-grey-dark uppercase font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8 hover:text-red-400 active:text-red-600"
             href="#"
           >
             Информация о событии
           </a>
           <a
-            className="no-underline text-grey-dark uppercase tracking-wide font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8"
+            className="no-underline text-grey-dark uppercase font-normal text-xs sm:text-sm md:text-sm lg:text-base xl:text-base py-3 mr-8 hover:text-red-400 active:text-red-600"
             href="#"
           >
             Ваш ответ
@@ -44,7 +44,7 @@ const First = () => {
         <h2 className="flex justify-center text text-base sm:text-xl md:text-xl lg:text-3xl xl:text-3xl">
           ВЕЧЕРИНКА ПО ЛЮБВИ
         </h2>
-        <p className="text-sm sm:text-base md:text-base lg:text-2xl xl:text-2xl px-32 text-center">
+        <p className="text-sm sm:text-base md:text-base lg:text-2xl xl:text-2xl px-12 sm:px-16 md:px-20 lg:px-24 xl:px-32 text-center">
           Мы решили обойтись без бумажных приглашений и создать для вашего удобства сайт, на котором
           вы сможете ознакомиться со всем, что касается нашей свадьбы:)
         </p>
