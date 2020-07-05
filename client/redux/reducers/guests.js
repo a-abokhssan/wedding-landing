@@ -53,9 +53,8 @@ export function addGuest(person) {
 
 export function getGuests() {
   return async (dispatch) => {
-    await axios('/api/v1/persons')
-      .then(({ data }) => {
-        dispatch({ type: GET_GUESTS, guests: data })
-      })
+    await axios('/api/v1/persons').then(({ data }) => {
+      dispatch({ type: GET_GUESTS, guests: data })
+    })
   }
 }
